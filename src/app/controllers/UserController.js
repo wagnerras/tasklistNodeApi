@@ -20,7 +20,7 @@ class UserController {
         })
 
         if (userExists) {
-            return res.status(400).json({ error: 'Usuario Já existe' });
+            return res.status(400).json({ error: 'Usuario já cadastrado.' });
         }
 
         const { id, name, email } = await User.create(req.body);
